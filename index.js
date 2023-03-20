@@ -3,7 +3,7 @@ const env = require("dotenv")
 const userRoutes = require('./Routes/userRoutes')
 const app = express()
 const chatRoutes = require("./Routes/chatRoutes")
-env.config({ path: '../.env' });
+env.config({ path: './.env' });
 require("./db")
 app.use(express.json())
 app.get('/', (req, res) => {
