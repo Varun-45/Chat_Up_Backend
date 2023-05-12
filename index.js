@@ -5,6 +5,9 @@ const app = express()
 const chatRoutes = require("./Routes/chatRoutes")
 const messageRoutes = require("./Routes/messageRoutes");
 const { Socket } = require("socket.io");
+const cors = require("cors")
+
+app.use(cors())
 env.config({ path: '../.env' });
 require("./db")
 app.use(express.json())
